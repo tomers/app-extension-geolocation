@@ -14,6 +14,8 @@ module.exports = function (api) {
                 "vue2-google-maps": "^0.10.7"
             }
         })
+        // api.render('./templates/vue2-google-maps')
     }
-    api.render('./templates')
+    api.render('./templates/base')
+    console.log('Added geolocation Vuex module. Make sure to register it in index.js')
 }
