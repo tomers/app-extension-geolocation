@@ -1,11 +1,14 @@
-Quasar App Extension Title <- change name
+Quasar App Extension Geolocation
 ===
 
-_Be sure to change this readme as appropriate for your app extension._
+This extension adds basic geolocation support (using navigator.geolocation).
+The geolocation data is available in the form of a Vuex module.
 
-_Think about the organization of this file and how the information will be beneficial to the user._
+## Demo project
+https://github.com/tomers/quasar-geolocation-example
 
-> Add a short description of your App Extension. What does it do? How is it beneficial? Why would someone want to use it?
+## Relevant documentation
+- [Navigator.geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation)
 
 # Install
 ```bash
@@ -15,7 +18,11 @@ Quasar CLI will retrieve it from NPM and install the extension.
 
 ## Prompts
 
-> If your app extension uses prompts, explain them here, otherwise remove this section.
+> Install optional vue2-google-maps package
+
+Allow automatic installation of [vue2-google-maps package](https://www.npmjs.com/package/vue2-google-maps),
+pre-configured with a boot file, so that its components (e.g. GmapMap) are
+ready to be used.
 
 # Uninstall
 ```bash
@@ -23,10 +30,29 @@ quasar ext remove my-ext <- change name
 ```
 
 # Info
-> Add longer information here that will help the user of your app extension.
+Detail of Vuex actions and getters:
+## Vuex actions
+- `actionQueryPermission`: query for geolocation permission
+- `actionSamplePosition`: query for current geolocation
 
-# Other Info
-> Add other information that's not as important to know
+## Vuex getters
+### Permission status
+- `getterIsPermissionKnown`: whether permission was acquired (by actionQueryPermission)
+- `getterIsPermissionGranted`
+- `getterIsPermissionPrompt`
+- `getterIsPermissionDenied`
+
+### Position fields
+- `getterHasPosition`: whether a position was acquired (by actionSamplePosition)
+- `getterTimestamp`
+- `getterCoords`
+- `getterLatitude`
+- `getterLongitude`
+- `getterAltitude`
+- `getterAccuracy`
+- `getterAltitudeAccuracy`
+- `getterHeading`
+- `getterSpeed`
 
 # Donate
 If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
