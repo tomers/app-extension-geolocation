@@ -37,22 +37,26 @@ Detail of Vuex actions and getters:
 
 ## Vuex getters
 ### Permission status
-- `getterIsPermissionKnown`: whether permission was acquired (by actionQueryPermission)
+- `getterIsPermissionKnown`: whether permission has been acquired (by `actionQueryPermission`)
 - `getterIsPermissionGranted`
 - `getterIsPermissionPrompt`
 - `getterIsPermissionDenied`
 
 ### Position fields
-- `getterHasPosition`: whether a position was acquired (by actionSamplePosition)
-- `getterTimestamp`
-- `getterCoords`
-- `getterLatitude`
-- `getterLongitude`
-- `getterAltitude`
-- `getterAccuracy`
-- `getterAltitudeAccuracy`
-- `getterHeading`
-- `getterSpeed`
+The geolocation is given in an [GeolocationPosition](https://developer.mozilla.org/en-US/docs/Web/API/GeolocationPosition) struct that is converted to an object.
+Getters are provided for each of its fields.
+
+- `getterHasPosition`: whether a position has been acquired (by `actionSamplePosition`)
+- `getterTimestamp`: [GeolocationPosition.timestamp](https://developer.mozilla.org/en-US/docs/Web/API/GeolocationPosition/timestamp) of the sample
+- `getterCoords`: [GeolocationCoordinates](https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates) (converted to object).
+Alternatively, there is a getter for each of the coord fields:
+    - `getterLatitude`
+    - `getterLongitude`
+    - `getterAltitude`
+    - `getterAccuracy`
+    - `getterAltitudeAccuracy`
+    - `getterHeading`
+    - `getterSpeed`
 
 # Donate
 If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
