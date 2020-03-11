@@ -68,7 +68,7 @@ export default {
 
 
 
-## Vuex getters
+## Store getters
 ### Permission status
 - `isPermissionKnown`: whether permission has been acquired (by action `queryPermission`)
 - `isPermissionGranted`
