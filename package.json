@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/tomers/app-extension-geolocation"
   },
-  "bugs": "",
-  "homepage": "",
+  "bugs": "https://github.com/tomers/app-extension-geolocation/issues",
+  "homepage": "https://github.com/tomers/app-extension-geolocation/blob/master/README.md",
   "engines": {
     "node": ">= 8.9.0",
     "npm": ">= 5.6.0",
