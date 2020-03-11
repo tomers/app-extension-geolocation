@@ -12,7 +12,7 @@ https://github.com/tomers/quasar-geolocation-example
 
 # Install
 ```bash
-quasar ext add my-ext <- change name
+quasar ext add tomers/geolocation
 ```
 Quasar CLI will retrieve it from NPM and install the extension.
 
@@ -26,7 +26,7 @@ ready to be used.
 
 # Uninstall
 ```bash
-quasar ext remove my-ext <- change name
+quasar ext remove tomers/geolocation
 ```
 
 # Info
