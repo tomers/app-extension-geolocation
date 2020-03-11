@@ -6,8 +6,6 @@
  */
 
 module.exports = function (api) {
-    // TODO: verify the Vuex is installed
-
     if (api.prompts.installVueGoogleMaps) {
         api.extendPackageJson({
             dependencies: {
@@ -16,6 +14,4 @@ module.exports = function (api) {
         })
         // api.render('./templates/vue2-google-maps')
     }
-    api.render('./templates/base')
-    console.log('Added geolocation Vuex module. Make sure to register it in index.js')
 }
