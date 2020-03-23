@@ -1,6 +1,6 @@
 {
   "name": "quasar-app-extension-geolocation",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "A Quasar App Extension to add Geolocation support",
   "author": "shalev.tomer@gmail.com",
   "license": "MIT",
