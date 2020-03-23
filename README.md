@@ -40,11 +40,11 @@ Detail of Vuex-like actions and getters
   </div>
 </template>
 <script>
-import { mapActions, mapGetters } from 'quasar-app-extension-geolocation/src/store'
+import { mapGeolocationActions, mapGeolocationGetters } from 'quasar-app-extension-geolocation/src/store'
 
 export default {
   computed: {
-    ...mapGetters([
+    ...mapGeolocationGetters([
       'hasPosition',
       'speed'
     ])
@@ -53,7 +53,7 @@ export default {
     this.samplePosition()
   },
   methods: {
-    ...mapActions([
+    ...mapGeolocationActions([
       'samplePosition',
     ])
   }

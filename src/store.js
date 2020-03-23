@@ -118,7 +118,7 @@ function normalizeMap (map) {
  * @param {Object|Array} getters
  * @return {Object}
  */
-export function mapGetters (getterList) {
+export function mapGeolocationGetters (getterList) {
     return normalizeMap(getterList).reduce(function (acc, ref) {
         return { ...acc, [ref.key]: getters[ref.val] }
     }, {})
@@ -130,7 +130,7 @@ export function mapGetters (getterList) {
  * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
  * @return {Object}
  */
-export function mapActions (actionsList) {
+export function mapGeolocationActions (actionsList) {
     return normalizeMap(actionsList).reduce(function (acc, ref) {
         return { ...acc, [ref.key]: actions[ref.val] }
     }, {})
